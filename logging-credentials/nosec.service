@@ -1,0 +1,12 @@
+[Unit]
+Description=NoSec With API Key with easy access
+
+[Service]
+ExecStart=python nosecurity.py
+Environment=API_KEY=this_is_a_secure_api_key
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=myapp
+
+[Install]
+WantedBy=multi-user.target
